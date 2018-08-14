@@ -21,8 +21,9 @@ MIN_MEMBERS        = int(os.getenv('MIN_MEMBERS', 0))
 DRY_RUN            = (os.getenv('DRY_RUN', 'true') == 'true')
 SLACK_TOKEN        = os.getenv('SLACK_TOKEN')
 TOO_OLD_DATETIME   = datetime.now() - timedelta(days=DAYS_INACTIVE)
+WARN_DATETIME      = datetime.now() - timedelta(days=(DAYS_INACTIVE-7))
 WHITELIST_KEYWORDS = os.getenv('WHITELIST_KEYWORDS')
-SKIP_SUBTYPES      = {'channel_leave', 'channel_join'}  # 'bot_message'
+SKIP_SUBTYPES      = {'channel_leave', 'channel_join','bot_message'}  # 'bot_message'
 
 THROTTLE_REQUESTS  = 0
 ERROR_RETRY = 0
