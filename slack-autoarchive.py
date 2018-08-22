@@ -22,8 +22,8 @@ WARN_DAYS                               = int(os.getenv('WARN_DAYS', 23))
 MIN_MEMBERS                             = int(os.getenv('MIN_MEMBERS', 0))
 DRY_RUN                                 = (os.getenv('DRY_RUN', 'true') == 'true')
 SLACK_TOKEN                             = os.getenv('SLACK_TOKEN')
-TOO_OLD_DATETIME                        = datetime.now() - timedelta(minutes=DAYS_INACTIVE)
-WARN_DATETIME                           = datetime.now() - timedelta(minutes=WARN_DAYS)
+TOO_OLD_DATETIME                        = datetime.now() - timedelta(days=DAYS_INACTIVE)
+WARN_DATETIME                           = datetime.now() - timedelta(days=WARN_DAYS)
 SKIP_SUBTYPES                           = {'channel_leave', 'channel_join','bot_message'}    # 'bot_message'
 
 THROTTLE_REQUESTS                       = 0
