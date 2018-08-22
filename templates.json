@@ -1,3 +1,4 @@
 {
-  "channel_template": "This channel has had no activity for %s days. It is being auto-archived. If you feel this is a mistake you can <https://slack.com/archives/archived|unarchive this channel> to bring it back at any point."
+  "channel_template": "This channel has had no activity for %s days. It is being auto-archived. If you feel this is a mistake you can <https://slack.com/archives/archived|unarchive this channel> to bring it back at any point.",
+  "warning_template": "This channel has had no activity for {} days. It will be archived {} days from now unless another user replies in this channel."
 }
